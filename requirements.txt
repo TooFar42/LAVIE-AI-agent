@@ -1,13 +1,21 @@
-torch>=2.4.0
-torchaudio>=2.4.0
-transformers>=4.45.0
-accelerate>=0.33.0
-Cython>=3.0.0
-nemo_toolkit[asr]>=2.0.0
-numpy<2.0.0
-kokoro-onnx>=0.5.0
-onnxruntime-gpu>=1.18.0
-phonemizer-fork>=0.2.0
+# ASR – faster-whisper (offline, no triton, Windows-compatible)
+faster-whisper>=1.0.0
+
+# TTS – Kokoro ONNX (offline, high quality)
+kokoro-onnx>=0.4.6
+
+# ONNX runtime with GPU support (includes CPU fallback)
+onnxruntime-gpu>=1.20.0
+
+# Audio I/O
 sounddevice>=0.4.6
+numpy<2
+
+# Input
 keyboard>=0.13.5
+
+# UI
+rich>=13.7.0
+
+# Fallback TTS (Windows SAPI5, fully offline)
 pyttsx3>=2.90
